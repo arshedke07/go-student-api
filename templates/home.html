@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <h2>Student Table</h2>
+
+    <table style="width:100%">
+        <tr>
+            <th colspan="5"><a href="/addstudent">Add New Student</th>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Attendance</th>
+            <th>Actions</th>
+        </tr>
+        <tbody>
+            {{range .Data}}
+            <tr>
+                <td>{{ .FirstName }}</td>
+                <td>{{ .LastName }}</td>
+                <td>{{ .EmailId }}</td>
+                <td>{{ .Attendance }}</td>
+                <th>
+                    <a href="/updatestudent/{{ .Id}}">Edit</a> |
+                    <a href="/deletestudent/{{ .Id}}">Delete</a>
+                </th>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+
+</body>
+
+</html>

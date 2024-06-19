@@ -1,0 +1,23 @@
+<form action="/deletestudent/{{ .Data.Id}}" method="post">
+    <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" value="{{ .Data.FirstName }}"
+            placeholder=" Enter First Name">
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" id="lastname" name="lastname" value="{{ .Data.LastName }}" placeholder="
+            Enter Last Name">
+    </div>
+    <div class="form-group">
+        <label for="emailid">Email Id</label>
+        <input type="email" class="form-control" id="emailid" name="emailid" value="{{ .Data.EmailId }}"
+            placeholder="Enter Email Id">
+    </div>
+    <div class="form-group">
+        <label for="attendance">Attendance</label>
+        <input type="number" class="form-control" id="attendance" name="attendance" value="{{ .Data.Attendance }}"
+            placeholder="Attendance">
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>
